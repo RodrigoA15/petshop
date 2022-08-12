@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MascotaController;
+use App\Http\Controllers\PropietarioController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('mascotas', MascotaController::class);
+//
+Route::resource('propietarios', PropietarioController::class);
